@@ -1,0 +1,397 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="../App_Themes/Terra/default.css" type="text/css" rel="stylesheet"/>
+    <style type="text/css">
+        table.imagetable {
+        font-family: verdana,arial,sans-serif;
+        font-size:11px;
+        color:#ffffff;
+        border-width: 1px;
+        border-color: #999999;
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 580px;
+        }
+
+        table.imagetable th {
+        background:#b5cfd2 url('cell-green.png');
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #999999;
+        }
+        table.imagetable td {
+        background: url('light_gray_back.png');
+        border-width: 1px;
+        padding: 4px;
+        border-style: solid;
+
+
+        }
+        .number {
+        font-family: verdana,arial,sans-serif;
+        font-size:15px;
+        color:#000000;
+        border-width: 1px;
+        border-color: #999999;
+        border-collapse: collapse;
+        text-align:center;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function neuroClicked()
+        {
+           Android.getStr("neuro");
+        }
+       
+        
+
+    </script>
+<body bgcolor="#DDDDDD">
+
+<div id="outer">
+    <div id="upbg">
+    </div>
+    <div id="inner">
+        <div id="splash">
+        </div>
+        <div id="primarycontent">
+
+
+            <div class="post">
+
+                <div class="post">
+
+                    <div class="content">
+
+                        <table border="1" class="imagetable">
+                            <tr class="ScoreSheetTableHeader">
+                                <th rowspan="2">
+                                    SIGN
+                                </th>
+                                <th colspan="5" align="center">
+                                    SCORE
+                                </th>
+
+                                <th colspan="2" align="right">
+                                    <input align="right" type='image' alt="Physical Maturity Table"
+                                           src="neurobtn.png" onclick="neuroClicked();"/>
+                                </th>
+                            </tr>
+                            <tr class="ScoreSheetBlue">
+                                <td style="height: 31px" class="number">
+                                    -1
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    0
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    1
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    2
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    3
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    4
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    5
+                                </td>
+                            </tr>
+
+                            <!--SKIN-->
+                            <tr>
+                                <th class="ScoreSheetBlue">
+                                    Skin
+                                </th>
+                                <td id="skn1">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('-1','Skin','skn1','skn',7);">Sticky,
+                                        friable, transparent</a></td>
+                                <td id="skn2">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('0','Skin','skn2','skn',7);">gelatinous,
+                                        red, translucent&nbsp;</a></td>
+                                <td id="skn3">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('1','Skin','skn3','skn',7);">smooth
+                                        pink, visible veins</a></td>
+                                <td id="skn4">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('2','Skin','skn4','skn',7);">superficial
+                                        peeling &amp;/or rash, few veins</a></td>
+                                <td id="skn5">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('3','Skin','skn5','skn',7);">cracking,
+                                        pale areas, rare veins</a></td>
+                                <td id="skn6">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('4','Skin','skn6','skn',7);">parchment,
+                                        deep cracking, no vessels</a></td>
+                                <td id="skn7">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('5','Skin','skn7','skn',7);">leathery,
+                                        cracked, wrinkled</a></td>
+                            </tr>
+                            <tr>
+                                <th class="ScoreSheetBlue">
+                                    <br/>
+                                    Lanugo<br/>
+                                    &nbsp;</th>
+                                <td id="lng1">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('-1','Lanugo','lng1','lng',6);">none</a>
+                                </td>
+                                <td id="lng2">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('0','Lanugo','lng2','lng',6);">sparse</a>
+                                </td>
+                                <td id="lng3">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('1','Lanugo','lng3','lng',6);">abundant</a>
+                                </td>
+                                <td id="lng4">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('2','Lanugo','lng4','lng',6);">thinning</a>
+                                </td>
+                                <td id="lng5">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('3','Lanugo','lng5','lng',6);">bald
+                                        areas</a></td>
+                                <td id="lng6">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('4','Lanugo','lng6','lng',6);">mostly
+                                        bald</a></td>
+                                <td class="ScoreSheetGray">
+                                    &nbsp;</td>
+
+                            </tr>
+                            <tr>
+                                <th class="ScoreSheetBlue">
+                                    Plantar Surface
+                                </th>
+                                <td id="pln1">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('-1','Plantar','pln1','pln',6);">
+                                        &nbsp;heel-toe<br/>40-50mm: -1 &lt;40mm: -2</a></td>
+                                <td id="pln2">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('0','Plantar','pln2','pln',6);">>50 mm<br/>
+                                        no crease</a></td>
+                                <td id="pln3">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('1','Plantar','pln3','pln',6);">faint
+                                        red marks</a></td>
+                                <td id="pln4">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('2','Plantar','pln4','pln',6);">anterior<br/>transverse
+                                        crease only</a></td>
+                                <td id="pln5">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('3','Plantar','pln5','pln',6);">creases
+                                        ant. 2/3</a></td>
+                                <td id="pln6">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('4','Plantar','pln6','pln',6);">creases
+                                        over entire sole</a></td>
+                                <td class="ScoreSheetGray">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th class="ScoreSheetBlue">
+                                    Breast
+                                </th>
+                                <td id="brt1">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('-1','Breast','brt1','brt',6);">imperce-ptable</a>
+                                </td>
+                                <td id="brt2">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('0','Breast','brt2','brt',6);">barely
+                                        perceptable</a></td>
+                                <td id="brt3">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('1','Breast','brt3','brt',6);">flat
+                                        areola<br/>
+                                        no bud</a></td>
+                                <td id="brt4">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('2','Breast','brt4','brt',6);">stippled
+                                        areola<br/>
+                                        1-2 mm bud</a></td>
+                                <td id="brt5">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('3','Breast','brt5','brt',6);">raised
+                                        areola<br/>
+                                        3-4 mm bud</a></td>
+                                <td id="brt6">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('4','Breast','brt6','brt',6);">full
+                                        areola<br/>
+                                        5-10 mm bud</a></td>
+                                <td class="ScoreSheetGray">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th class="ScoreSheetBlue">
+                                    Eye / Ear
+                                </th>
+                                <td id="eye1">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('-1','Eye','eye1','eye',6);">lids
+                                        fused<br/>
+                                        loosely: -1<br/>
+                                        tightly: -2</a></td>
+                                <td id="eye2">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('0','Eye','eye2','eye',6);">lids
+                                        open<br/>
+                                        pinna flat<br/>
+                                        stays folded</a></td>
+                                <td id="eye3">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('1','Eye','eye3','eye',6);">sl. curved
+                                        pinna; soft; slow recoil</a></td>
+                                <td id="eye4">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('2','Eye','eye4','eye',6);">well-curved
+                                        pinna; soft but ready recoil</a></td>
+                                <td id="eye5">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('3','Eye','eye5','eye',6);"> formed
+                                        &amp; firm<br/>
+                                        instant recoil</a></td>
+                                <td id="eye6">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('4','Eye','eye6','eye',6);"> thick
+                                        cartilage<br/>
+                                        ear stiff</a></td>
+                                <td class="ScoreSheetGray">
+                                    &nbsp;</td>
+
+                            </tr>
+                            <tr>
+                                <th class="ScoreSheetBlue">
+                                    Genitals (Male)
+                                </th>
+                                <td id="mal1">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('-1','Male','mal1','mal',6);">scrotum
+                                        flat, smooth</a></td>
+                                <td id="mal2">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('0','Male','mal2','mal',6);">scrotum
+                                        empty,<br/>
+                                        faint rugae</a></td>
+                                <td id="mal3">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('1','Male','mal3','mal',6);">testes in
+                                        upper canal,<br/>
+                                        rare rugae</a></td>
+                                <td id="mal4">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('2','Male','mal4','mal',6);">testes
+                                        descending,<br/>
+                                        few rugae</a></td>
+                                <td id="mal5">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('3','Male','mal5','mal',6);">testes
+                                        down,<br/>
+                                        good rugae</a></td>
+                                <td id="mal6">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('4','Male','mal6','mal',6);">testes
+                                        pendulous,<br/>
+                                        deep rugae</a></td>
+                                <td class="ScoreSheetGray">
+                                    &nbsp;</td>
+
+                            </tr>
+                            <tr>
+                                <th class="ScoreSheetBlue">
+                                    Genitals (Female)
+                                </th>
+                                <td id="fem1">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('-1','Female','fem1','fem',6);">clitoris<br/>prominent
+                                        &amp; labia flat</a></td>
+                                <td id="fem2">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('0','Female','fem2','fem',6);">prominent<br/>clitoris
+                                        &amp; small labia minora</a></td>
+                                <td id="fem3">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('1','Female','fem3','fem',6);">prominent<br/>clitoris
+                                        &amp; enlarging minora</a></td>
+                                <td id="fem4">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('2','Female','fem4','fem',6);">majora
+                                        &amp; minora equally prominent</a></td>
+                                <td id="fem5">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('3','Female','fem5','fem',6);">majora
+                                        large,<br/>
+                                        minora small</a></td>
+                                <td id="fem6">
+                                    <a style="color:black" href="js-call:"
+                                       onclick="valuePickFunc('4','Female','fem6','fem',6);">majora
+                                        cover clitoris &amp; minora</a></td>
+                                <td class="ScoreSheetGray">
+                                    &nbsp;</td>
+
+                            </tr>
+                            <tr>
+
+                                <th colspan=4 align="center">
+                                    TOTAL PHYSICAL MATURITY SCORE
+                                </th>
+                                <th colspan=4 align="left">
+                                                <textarea
+                                                        style="background-color:3A3B1F; visibility:hidden; color:white; font-size: 20pt;"
+                                                        id="physicalSUM" rows="1" cols="2"
+                                                        hidden="YES" readonly="YES"
+                                                        style="border: none; font-size: 12pt">
+                                                    
+                                                </textarea>
+                                </th>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                </div>
+
+
+                <!--References footer -->
+                <div class="post">
+                    <div class="content">
+
+                        <input align="left" width="180" height="40" id="scorechk" align="left"
+                               type='image' alt="Calculate Score" src="calculatescorebtn.png"
+                               onclick="checkValues();"/>
+                        <br><br>
+                        <p><span class="smallFooter"><b>References :</b>
+                                        <br/>Ballard JL, Khoury JC, Wedig K,
+                                        <i>et al</i>
+                                        : New Ballard Score, expanded to include extremely premature<br/>infants.
+                                        <i>J Pediatrics</i> 1991; 119:417-423.
+                                    </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- primary content end -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_score"
+            android:icon="@drawable/security_checked"
+            android:checked="true"
+            android:title="Score Sheet"/>
+        <item
+            android:id="@+id/nav_training"
+            android:icon="@drawable/nav_training"
+            android:title="Training"/>
+        <item
+            android:id="@+id/nav_video"
+            android:icon="@drawable/video_camera_tab"
+            android:title="Video"/>
+        <item
+            android:id="@+id/nav_essay"
+            android:icon="@drawable/nav_essay"
+            android:title="Essay"/>
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/help_tab"
+            android:title="FAQ"/>
+        <item
+            android:id="@+id/nav_unlock"
+            android:icon="@drawable/unlock_tab"
+            android:title="Unlock"/>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_feedback"
+                android:title="Feedback"/>
+            <item
+                android:id="@+id/nav_contact"
+                android:title="Contact"/>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ballard Score</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_calculate_maturity_lock">CalculateMaturityLock</string>
+    <string name="title_activity_full_screen_lock">FullScreenLock</string>
+
+    <string name="refference_text">Ballard JL, Khoury JC, Wedig K, et al : New Ballard Score, expanded to include extremely premature \n infants. J Pediatrics 1991; 119:417-423.</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>

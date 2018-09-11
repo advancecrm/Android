@@ -27,7 +27,7 @@ import java.util.List;
  * item details side-by-side using two vertical panes.
  */
 public class FAQListActivity extends AppCompatActivity {
-
+    public static String rslt="";    /** Called when the activity is first created. */
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.

@@ -1,4 +1,4 @@
-package com.example.myfirstapp;
+package com.ballardscore.myfirstapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.myfirstapp", appContext.getPackageName());
+        assertEquals("com.ballardscore.myfirstapp", appContext.getPackageName());
     }
 }

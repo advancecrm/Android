@@ -1,4 +1,4 @@
-package com.example.myfirstapp;
+package com.ballardscore.myfirstapp;
 
 import org.junit.Test;
 

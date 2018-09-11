@@ -1,4 +1,4 @@
-package com.example.myfirstapp;
+package com.ballardscore.myfirstapp;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

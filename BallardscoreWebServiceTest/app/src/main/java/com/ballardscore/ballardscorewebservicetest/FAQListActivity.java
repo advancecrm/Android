@@ -1,5 +1,6 @@
 package com.ballardscore.ballardscorewebservicetest;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.ballardscore.ballardscorewebservicetest.WebService.Caller;
 import com.ballardscore.ballardscorewebservicetest.dummy.DummyContent;
 
 import java.util.List;
@@ -39,6 +41,9 @@ public class FAQListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq_list);
 
+        // testing alert dialog
+        final AlertDialog ad=new AlertDialog.Builder(this).create();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
@@ -62,7 +67,32 @@ public class FAQListActivity extends AppCompatActivity {
 
         View recyclerView = findViewById(R.id.faq_list);
         assert recyclerView != null;
-        setupRecyclerView((RecyclerView) recyclerView);
+        //setupRecyclerView((RecyclerView) recyclerView);
+
+        try
+        {
+            //int a=Integer.parseInt(ed1.getText().toString());
+            //int b=Integer.parseInt(ed2.getText().toString());
+            rslt="START";
+            Caller c=new Caller();
+            //c.a=a;c.b=b;c.ad=ad;
+            c.join(); c.start();
+            while(rslt=="START") {
+                try {
+                    Thread.sleep(10);
+                }catch(Exception ex) {
+                }
+            }
+            ad.setTitle("RESULT GetFAQ");
+            ad.setMessage(rslt);
+
+        }
+        catch (Exception ex)
+        {
+            ad.setTitle("Error!"); ad.setMessage(ex.toString());
+        }
+        ad.show();
+
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {

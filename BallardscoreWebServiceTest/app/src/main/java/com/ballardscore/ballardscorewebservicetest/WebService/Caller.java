@@ -4,14 +4,16 @@ import com.ballardscore.ballardscorewebservicetest.FAQListActivity;
 
 public class Caller extends Thread {
     public CallSoap cs;
-    public int a,b;
+    //public int a,b;
 
     public void run(){
         try{
             cs=new CallSoap();
-            String resp=cs.CallGetFAQ(a, b);
+            String resp=cs.CallGetFAQ();
             FAQListActivity.rslt=resp;
         }catch(Exception ex)
-        {FAQListActivity.rslt=ex.toString();}
+        {
+            FAQListActivity.rslt=ex.toString();
+        }
     }
 }

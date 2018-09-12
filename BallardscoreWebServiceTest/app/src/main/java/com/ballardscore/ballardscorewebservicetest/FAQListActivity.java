@@ -1,6 +1,5 @@
 package com.ballardscore.ballardscorewebservicetest;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +15,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.ballardscore.ballardscorewebservicetest.WebService.Caller;
-import com.ballardscore.ballardscorewebservicetest.dummy.DummyContent;
+import com.ballardscore.ballardscorewebservicetest.FAQ.FAQContent;
+import com.ballardscore.ballardscorewebservicetest.util.Constants;
 
 import java.util.List;
 
@@ -30,6 +30,7 @@ import java.util.List;
  */
 public class FAQListActivity extends AppCompatActivity {
     public static String rslt="";    /** Called when the activity is first created. */
+    public static String error;
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.
@@ -40,9 +41,6 @@ public class FAQListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq_list);
-
-        // testing alert dialog
-        final AlertDialog ad=new AlertDialog.Builder(this).create();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -67,48 +65,51 @@ public class FAQListActivity extends AppCompatActivity {
 
         View recyclerView = findViewById(R.id.faq_list);
         assert recyclerView != null;
-        //setupRecyclerView((RecyclerView) recyclerView);
+
 
         try
         {
-            //int a=Integer.parseInt(ed1.getText().toString());
-            //int b=Integer.parseInt(ed2.getText().toString());
             rslt="START";
             Caller c=new Caller();
             //c.a=a;c.b=b;c.ad=ad;
             c.join(); c.start();
-            while(rslt=="START") {
+            int i = 0;
+            while(rslt.equals("START") && i < 50) {
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(50);
+                    i++;
                 }catch(Exception ex) {
                 }
             }
-            ad.setTitle("RESULT GetFAQ");
-            ad.setMessage(rslt);
-
+            //count=i;
         }
         catch (Exception ex)
         {
-            ad.setTitle("Error!"); ad.setMessage(ex.toString());
+            rslt= Constants.DEFAULT_RESULT;
         }
-        ad.show();
+        if (!rslt.startsWith("[")) {
+            error=rslt;
+            rslt= Constants.DEFAULT_RESULT;
+        }
+
+        setupRecyclerView((RecyclerView) recyclerView);
 
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
-        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(this, DummyContent.ITEMS, mTwoPane));
+        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(this, FAQContent.ITEMS, mTwoPane));
     }
 
     public static class SimpleItemRecyclerViewAdapter
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
 
         private final FAQListActivity mParentActivity;
-        private final List<DummyContent.DummyItem> mValues;
+        private final List<FAQContent.FAQItem> mValues;
         private final boolean mTwoPane;
         private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DummyContent.DummyItem item = (DummyContent.DummyItem) view.getTag();
+                FAQContent.FAQItem item = (FAQContent.FAQItem) view.getTag();
                 if (mTwoPane) {
                     Bundle arguments = new Bundle();
                     arguments.putString(FAQDetailFragment.ARG_ITEM_ID, item.id);
@@ -128,7 +129,7 @@ public class FAQListActivity extends AppCompatActivity {
         };
 
         SimpleItemRecyclerViewAdapter(FAQListActivity parent,
-                                      List<DummyContent.DummyItem> items,
+                                      List<FAQContent.FAQItem> items,
                                       boolean twoPane) {
             mValues = items;
             mParentActivity = parent;

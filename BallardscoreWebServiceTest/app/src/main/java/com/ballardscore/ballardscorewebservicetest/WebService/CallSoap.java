@@ -13,40 +13,24 @@ public class CallSoap {
 
     public  final String WSDL_TARGET_NAMESPACE = "http://tempuri.org/";
 
-    public static final String SOAP_ADDRESS = "http://ballardscore.com/iphneservice/iphnservice.asmx";
+    public static final String SOAP_ADDRESS = "http://www.ballardscore.com/iphneservice/iphnservice.asmx";
     public CallSoap()
     {
     }
-    /*public String CallGetFAQ()
-    {
-        SoapObject request = new SoapObject(WSDL_TARGET_NAMESPACE,ADD_OPERATION_NAME);
-        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
-                SoapEnvelope.VER11);
-
-        envelope.dotNet = true;
-
-        envelope.setOutputSoapObject(request);
-        HttpTransportSE httpTransport = new HttpTransportSE(SOAP_ADDRESS);
-        Object response=null;
-        try
-        {
-            httpTransport.call(SOAP_ACTION, envelope);
-            //response = envelope.getResponse();
-        }
-
-    }*/
-    public String CallGetFAQ(int a,int b)
+    public String CallGetFAQ()
     {
         SoapObject request = new SoapObject(WSDL_TARGET_NAMESPACE,ADD_OPERATION_NAME);
         PropertyInfo pi=new PropertyInfo();
-        pi.setName("a");
-        pi.setValue(a);
-        pi.setType(Integer.class);
+
+        //Set Web Service Parameters
+        //pi.setName("a");
+        //pi.setValue(a);
+        //pi.setType(Integer.class);
         //request.addProperty(pi);
-        pi=new PropertyInfo();
-        pi.setName("b");
-        pi.setValue(b);
-        pi.setType(Integer.class);
+        //pi=new PropertyInfo();
+        //pi.setName("b");
+        //pi.setValue(b);
+        //pi.setType(Integer.class);
         //request.addProperty(pi);
 
         SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(

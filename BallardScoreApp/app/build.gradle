@@ -24,4 +24,5 @@ dependencies {
     compile 'com.android.support:design:27.0.2'
     compile files('libs/GoogleAdMobAdsSdk-6.4.1.jar')
     compile files('libs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
+    //implementation 'com.google.android.gms:play-services-ads:15.0.0'
 }

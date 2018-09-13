@@ -20,9 +20,9 @@ import com.ballardscoreapp.main.payment.IabHelper;
 import com.ballardscoreapp.main.util.ActionBar;
 import com.ballardscoreapp.main.util.Constants;
 import com.ballardscoreapp.main.util.Globals;
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+//import com.google.ads.AdRequest;
+//import com.google.ads.AdSize;
+//import com.google.ads.AdView;
 
 public class ScoreFrag extends Fragment {
 
@@ -31,7 +31,7 @@ public class ScoreFrag extends Fragment {
     Button Maturity_rating_table, Calculate_maturity_rate;
     SharedPreferences sp;
     TextView week_tv, score_tv;
-    AdView adView;
+//    AdView adView;
     LinearLayout layout;
     Globals global;
     boolean first = true;
@@ -65,15 +65,15 @@ public class ScoreFrag extends Fragment {
                 .findViewById(R.id.maturity_rating_table);
         Calculate_maturity_rate = (Button) rootView
                 .findViewById(R.id.calculate_maturity_rate);
-        LinearLayout layout = (LinearLayout) rootView
-                .findViewById(R.id.admob_view);
+//        LinearLayout layout = (LinearLayout) rootView
+//                .findViewById(R.id.admob_view);
 
-        //AdSize adsize = new AdSize(LayoutParams.MATCH_PARENT, 120);
+//        //AdSize adsize = new AdSize(LayoutParams.MATCH_PARENT, 120);
 
-        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER,
-                "ca-app-pub-7124699817614464/7549868151");
-        layout.addView(ad);
-        ad.loadAd(new AdRequest());
+//        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER,
+//                "ca-app-pub-7124699817614464/7549868151");
+//        layout.addView(ad);
+//        ad.loadAd(new AdRequest());
 
         Calculate_maturity_rate.setOnClickListener(new OnClickListener() {
             @Override

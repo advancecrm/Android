@@ -11,9 +11,10 @@ import android.widget.FrameLayout;
 
 import com.ballardscoreapp.main.R;
 import com.ballardscoreapp.main.ui.DetailActivity;
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.ballardscoreapp.main.util.Constants;
+//import com.google.ads.AdRequest;
+//import com.google.ads.AdSize;
+//import com.google.ads.AdView;
 
 
 public class NewScoreFragment extends Fragment {
@@ -32,10 +33,11 @@ public class NewScoreFragment extends Fragment {
         WebView webView = (WebView) rootView.findViewById(R.id.webview);
         webView.loadUrl("file:///android_asset/html/NewBallardVC.html");
 
-        FrameLayout layout = (FrameLayout) rootView.findViewById(R.id.admob_view);
-        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
-        layout.addView(ad);
-        ad.loadAd(new AdRequest());
+//        FrameLayout layout = (FrameLayout) rootView.findViewById(R.id.admob_view);
+//        //AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
+//        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, Constants.BALLARD_BANNER_ID);
+//        layout.addView(ad);
+//        ad.loadAd(new AdRequest());
 
         return rootView;
     }

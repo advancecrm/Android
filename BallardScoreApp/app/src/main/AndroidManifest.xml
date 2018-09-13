@@ -10,6 +10,12 @@
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
+    <!--
+    <meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
+        android:value="ca-app-pub-7124699817614464~9433246821"/>
+    -->
+
     <application
         android:name=".util.Globals"
         android:allowBackup="true"

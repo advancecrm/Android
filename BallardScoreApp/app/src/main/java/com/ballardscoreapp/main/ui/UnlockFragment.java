@@ -23,9 +23,9 @@ import com.ballardscoreapp.main.payment.IabResult;
 import com.ballardscoreapp.main.payment.Inventory;
 import com.ballardscoreapp.main.payment.Purchase;
 import com.ballardscoreapp.main.util.Constants;
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+//import com.google.ads.AdRequest;
+//import com.google.ads.AdSize;
+//import com.google.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,12 +57,12 @@ public class UnlockFragment extends Fragment {
 
         unlockButton = (Button) rootView.findViewById(R.id.unlock_button);
 
-        LinearLayout layout = (LinearLayout) rootView
-                .findViewById(R.id.admob_view);
-        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER,
-                "ca-app-pub-7124699817614464/7549868151");
-        layout.addView(ad);
-        ad.loadAd(new AdRequest());
+//        LinearLayout layout = (LinearLayout) rootView
+//                .findViewById(R.id.admob_view);
+//        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER,
+//                "ca-app-pub-7124699817614464/7549868151");
+//        layout.addView(ad);
+//        ad.loadAd(new AdRequest());
 
         String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1aylmg5342yHQ5Jl0t94WG0Ngvne3UoRAtWUJERiFT5I+uDvCejOymGjs0lqHwRdkynWpDYWUhwGWYl6XYQay5nYusCddJBtxl+JFMTlbyTXR/D4Jt24zRgjil3sHgnHkTKNOr5XJrh7fvJuBxNS9+KGXIfpVUDJCvt+Ckan5bRSnNAYHRe1TlLX1+tZayz1R0NIrN6f8PqvbQJyJqOP9ip1qAzQUh3LoXDfnB/OOgpH8TMWzLstkMyKrjlq5loWmu/0VnY9NXfzZsMa4w3dZbG8Qgb5UpayoaDTe4olhOYZFKMNkkQe157U7OHI38iyF7pPMZm3+x9IRLjWVx+9FQIDAQAB";
 

@@ -25,9 +25,9 @@ import com.ballardscoreapp.main.ui.DetailActivity;
 import com.ballardscoreapp.main.util.Constants;
 import com.ballardscoreapp.main.util.Globals;
 import com.ballardscoreapp.main.util.WebserviceCall;
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+//import com.google.ads.AdRequest;
+//import com.google.ads.AdSize;
+//import com.google.ads.AdView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -94,11 +94,11 @@ public class FaqMasterFragment extends Fragment {
         global = (Globals) getActivity().getApplicationContext();
         Faq_list = (ListView) rootView.findViewById(R.id.faq_list);
 
-        layout = (FrameLayout) rootView.findViewById(R.id.admob_view);
+//        layout = (FrameLayout) rootView.findViewById(R.id.admob_view);
 
-        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
-        layout.addView(ad);
-        ad.loadAd(new AdRequest());
+//        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
+//        layout.addView(ad);
+//        ad.loadAd(new AdRequest());
 
 
         if (global.getQueAnsList().size() > 0) {

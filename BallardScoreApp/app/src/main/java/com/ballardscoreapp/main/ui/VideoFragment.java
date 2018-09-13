@@ -33,9 +33,9 @@ import com.ballardscoreapp.main.payment.Inventory;
 import com.ballardscoreapp.main.util.ActionBar;
 import com.ballardscoreapp.main.util.Constants;
 import com.ballardscoreapp.main.util.Decompres;
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+//import com.google.ads.AdRequest;
+//import com.google.ads.AdSize;
+//import com.google.ads.AdView;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -136,11 +136,11 @@ public class VideoFragment extends Fragment {
 
         viewPager.setAdapter(adapter);
 
-        LinearLayout layout = (LinearLayout) container.findViewById(R.id.admob_view);
+//        LinearLayout layout = (LinearLayout) container.findViewById(R.id.admob_view);
 
-        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
-        layout.addView(ad);
-        ad.loadAd(new AdRequest());
+//        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
+//        layout.addView(ad);
+//        ad.loadAd(new AdRequest());
 
 
         viewPager.setOnPageChangeListener(new OnPageChangeListener() {

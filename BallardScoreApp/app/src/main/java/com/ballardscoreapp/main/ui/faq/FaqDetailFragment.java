@@ -15,9 +15,9 @@ import com.ballardscoreapp.main.R;
 import com.ballardscoreapp.main.ui.DetailActivity;
 import com.ballardscoreapp.main.util.Constants;
 import com.ballardscoreapp.main.util.Globals;
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+//import com.google.ads.AdRequest;
+//import com.google.ads.AdSize;
+//import com.google.ads.AdView;
 
 public class FaqDetailFragment extends Fragment {
 
@@ -38,13 +38,13 @@ public class FaqDetailFragment extends Fragment {
         String que = global.getQueAnsList().get(global.pos)
                 .get(Constants.QUESTION);
 
-        LinearLayout layout = (LinearLayout) container
-                .findViewById(R.id.admob_view);
+ //       LinearLayout layout = (LinearLayout) container
+//                .findViewById(R.id.admob_view);
 
-        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER,
-                "ca-app-pub-7124699817614464/7549868151");
-        layout.addView(ad);
-        ad.loadAd(new AdRequest());
+//        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER,
+//                "ca-app-pub-7124699817614464/7549868151");
+//        layout.addView(ad);
+//        ad.loadAd(new AdRequest());
 
         que_tv.setText(que);
         String s5 = ans.replace(";\':", ";\">");

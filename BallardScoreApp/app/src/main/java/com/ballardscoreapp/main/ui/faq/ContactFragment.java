@@ -20,9 +20,9 @@ import com.ballardscoreapp.main.R;
 import com.ballardscoreapp.main.ui.DetailActivity;
 import com.ballardscoreapp.main.util.Globals;
 import com.ballardscoreapp.main.util.MessageSendService;
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+//import com.google.ads.AdRequest;
+//import com.google.ads.AdSize;
+//import com.google.ads.AdView;
 
 public class ContactFragment extends Fragment {
     EditText first_et, last_et, email_et, subject_et, que_et;
@@ -74,10 +74,10 @@ public class ContactFragment extends Fragment {
             actionBar.setTitle("Contact");
         }
 
-        LinearLayout layout = (LinearLayout) rootView.findViewById(R.id.admob_view);
-        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
-        layout.addView(ad);
-        ad.loadAd(new AdRequest());
+//        LinearLayout layout = (LinearLayout) rootView.findViewById(R.id.admob_view);
+//        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
+//        layout.addView(ad);
+//        ad.loadAd(new AdRequest());
 
         first_et = (EditText) rootView.findViewById(R.id.first_name_et);
         last_et = (EditText) rootView.findViewById(R.id.last_name_et);

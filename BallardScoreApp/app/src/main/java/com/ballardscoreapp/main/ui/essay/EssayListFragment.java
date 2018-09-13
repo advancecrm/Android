@@ -17,9 +17,10 @@ import android.widget.TextView;
 
 import com.ballardscoreapp.main.R;
 import com.ballardscoreapp.main.ui.DetailActivity;
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.ballardscoreapp.main.util.Constants;
+//import com.google.ads.AdRequest;
+//import com.google.ads.AdSize;
+//import com.google.ads.AdView;
 
 public class EssayListFragment extends Fragment {
 
@@ -33,10 +34,11 @@ public class EssayListFragment extends Fragment {
         ListView listView = (ListView) rootView.findViewById(R.id.monograph_list);
         listView.setAdapter(new MonographAdapter(getActivity(), ItemText));
 
-        FrameLayout admobView = (FrameLayout) rootView.findViewById(R.id.admob_view);
-        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
-        admobView.addView(ad);
-        ad.loadAd(new AdRequest());
+//        FrameLayout admobView = (FrameLayout) rootView.findViewById(R.id.admob_view);
+//        //AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
+//        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, Constants.BALLARD_BANNER_ID);
+//        admobView.addView(ad);
+//        ad.loadAd(new AdRequest());
 
         final Intent intent = new Intent(getActivity(), DetailActivity.class);
         listView.setOnItemClickListener(new OnItemClickListener() {

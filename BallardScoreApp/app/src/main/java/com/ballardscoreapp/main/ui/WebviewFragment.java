@@ -10,9 +10,9 @@ import android.webkit.WebView;
 import android.widget.FrameLayout;
 
 import com.ballardscoreapp.main.R;
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+//import com.google.ads.AdRequest;
+//import com.google.ads.AdSize;
+//import com.google.ads.AdView;
 
 public class WebviewFragment extends Fragment {
 
@@ -41,10 +41,10 @@ public class WebviewFragment extends Fragment {
             webView.loadUrl(url);
         }
 
-        FrameLayout layout = (FrameLayout) rootView.findViewById(R.id.admob_view);
-        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
-        layout.addView(ad);
-        ad.loadAd(new AdRequest());
+//        FrameLayout layout = (FrameLayout) rootView.findViewById(R.id.admob_view);
+//        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
+//        layout.addView(ad);
+//        ad.loadAd(new AdRequest());
 
         return rootView;
     }

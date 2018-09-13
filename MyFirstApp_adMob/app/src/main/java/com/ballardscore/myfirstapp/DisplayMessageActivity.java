@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.ballardscore.myfirstapp.util.Constants;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
@@ -29,18 +31,17 @@ public class DisplayMessageActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.textView2);
         textView.setText(message);
 
-        // Show banner add
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544/6300978111");
+        MobileAds.initialize(this, Constants.SAMPLE_BANNER_ID);
         // Load an Ad:
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
         //Initialize Interstitial ad
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544/1033173712");
+        MobileAds.initialize(this, Constants.BALLARD_INTERST_ID);
         // Load an Ad:
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId(Constants.BALLARD_INTERST_ID);
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
     }
@@ -58,7 +59,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
             });
         } else {
             Log.d("TAG", "The interstitial wasn't loaded yet.");
-            //super.onBackPressed();
+            super.onBackPressed();
         }
     }
 }

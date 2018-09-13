@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ballardscore.myfirstapp">
 
+    <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+    <!-- ballardscore Admob App Id: ca-app-pub-7124699817614464~9433246821 -->
+    <meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
+        android:value="ca-app-pub-7124699817614464~9433246821"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

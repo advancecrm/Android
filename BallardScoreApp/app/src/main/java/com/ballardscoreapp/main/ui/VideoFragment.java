@@ -143,6 +143,7 @@ public class VideoFragment extends Fragment {
 //        ad.loadAd(new AdRequest());
 
 
+        // Debugging crash navigating away from video page
         viewPager.setOnPageChangeListener(new OnPageChangeListener() {
 
             @Override

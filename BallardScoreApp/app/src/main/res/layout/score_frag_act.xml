@@ -14,6 +14,9 @@
         android:textColor="@android:color/white"
         android:textSize="22sp"
         android:visibility="invisible"/>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ScrollView
         android:id="@+id/scrl"
@@ -171,6 +174,7 @@
         </RelativeLayout>
     </ScrollView>
 
+    <!--
     <LinearLayout
         android:id="@+id/admob_view"
         android:layout_width="match_parent"
@@ -178,5 +182,24 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
     </LinearLayout>
+    -->
 
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-7124699817614464/2099598007"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintTop_toBottomOf="@+id/scrl"></com.google.android.gms.ads.AdView>
+    </android.support.constraint.ConstraintLayout>
 </RelativeLayout>

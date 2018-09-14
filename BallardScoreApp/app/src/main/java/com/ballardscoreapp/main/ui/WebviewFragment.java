@@ -10,12 +10,16 @@ import android.webkit.WebView;
 import android.widget.FrameLayout;
 
 import com.ballardscoreapp.main.R;
+import com.ballardscoreapp.main.util.Constants;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 //import com.google.ads.AdRequest;
 //import com.google.ads.AdSize;
 //import com.google.ads.AdView;
 
 public class WebviewFragment extends Fragment {
-
+    private AdView mAdView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,
                              Bundle savedInstanceState) {
@@ -45,6 +49,12 @@ public class WebviewFragment extends Fragment {
 //        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
 //        layout.addView(ad);
 //        ad.loadAd(new AdRequest());
+        MobileAds.initialize(rootView.getContext(), Constants.BALLARD_BANNER_ID);
+        // Load an Ad:
+        mAdView = rootView.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         return rootView;
     }

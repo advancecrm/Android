@@ -19,12 +19,16 @@ import android.widget.TextView;
 import com.ballardscoreapp.main.R;
 import com.ballardscoreapp.main.ui.DetailActivity;
 import com.ballardscoreapp.main.ui.WebviewFragment;
+import com.ballardscoreapp.main.util.Constants;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 //import com.google.ads.AdRequest;
 //import com.google.ads.AdSize;
 //import com.google.ads.AdView;
 
 public class TrainingPhysicalFragment extends Fragment {
-
+    private AdView mAdView;
     String[] mSections = {"1 Skin", "2 Lanugo", "3 Plantar Surface", "4 Breast",
             "5 Eye/Ear", "6 Genitals-male", "7 Genitals-female"};
 
@@ -61,6 +65,11 @@ public class TrainingPhysicalFragment extends Fragment {
 //        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, "ca-app-pub-7124699817614464/7549868151");
 //        layout.addView(ad);
 //        ad.loadAd(new AdRequest());
+        MobileAds.initialize(rootView.getContext(), Constants.BALLARD_BANNER_ID);
+        // Load an Ad:
+        mAdView = rootView.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         return rootView;
     }

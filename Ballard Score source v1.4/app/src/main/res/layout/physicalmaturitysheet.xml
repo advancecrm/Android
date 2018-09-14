@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/header_tv"
+        android:layout_width="810dp"
+        android:layout_height="45dp"
+        android:background="@drawable/topbar"
+        android:gravity="center"
+        android:text="PHYSICAL MATURITY"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        />
+
+    <ScrollView
+        android:id="@+id/verscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_tv">
+
+        <HorizontalScrollView
+            android:id="@+id/hcl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/maincontainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/child_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/sign_tv"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/cellgreen"
+                        android:gravity="center"
+                        android:text="SIGN"
+                        android:textColor="@android:color/white"
+
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="90dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <LinearLayout
+                        android:layout_width="506dp"
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/scoreheader_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/cellgreen"
+                            android:gravity="center"
+                            android:text="SCORE"
+                            android:textColor="@android:color/white"
+
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/score_tv"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/light_gray_back"
+                                android:gravity="center"
+                                android:text="-1"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp"/>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/darker_gray"/>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/light_gray_back"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp"/>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/darker_gray"/>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/light_gray_back"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp"/>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/darker_gray"/>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/light_gray_back"
+                                android:gravity="center"
+                                android:text="2"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp"/>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/darker_gray"/>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/light_gray_back"
+                                android:gravity="center"
+                                android:text="3"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="90dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/cellgreen">
+
+                            <ImageView
+                                android:id="@+id/neuro_img"
+                                android:layout_width="140dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="30dp"
+                                android:background="@drawable/neurobtn"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="98dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/light_gray_back"
+                                android:gravity="center"
+                                android:text="4"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp"/>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="50dp"
+                                android:background="@android:color/darker_gray"/>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/light_gray_back"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textColor="@android:color/black"
+                                android:textSize="16sp"/>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="50dp"
+                                android:background="@android:color/darker_gray"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cellgreen"
+                        android:gravity="center"
+                        android:text="Skin"
+                        android:textColor="@android:color/white"
+
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/score1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+
+                        android:text="Sticky, friable, transparent"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/score2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="gelatinous, red, translucent"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/score3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="smooth pink, visible veins"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/score4"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="superficial peeling &amp;/or rash, few veins"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/score5"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="cracking, pale  areas, rare veins"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/score6"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="parchment, deep cracking, no vessels"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/score7"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="leathery, cracked, wrinkled"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cellgreen"
+                        android:gravity="center"
+                        android:text="Lanugo"
+                        android:textColor="@android:color/white"
+
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/lanugo1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="none"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/lanugo2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="sparse"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/lanugo3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="abundant"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/lanugo4"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="thinning"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/lanugo5"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="bald areas"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/lanugo6"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="mostly bald"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cellgreen"
+                        android:gravity="center"
+                        android:text="Plantar Surface"
+
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/plant1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="heel-toe 40-50mm: -1 &lt;40mm: -2"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/plant2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="> 50 mm"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/plant3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="faint red marks"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/plant4"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="anterior transverse crease only"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/plant5"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="creases ant."
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/plant6"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="creases over entire sole"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cellgreen"
+                        android:gravity="center"
+                        android:text="Breast"
+
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/breast1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="imperce-ptable"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/breast2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="barely perceptable"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/breast3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="flat areola"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/breast4"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="stippled areola"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/breast5"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="raised areola"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/breast6"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="full areola"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cellgreen"
+                        android:gravity="center"
+                        android:text="Eye/Ear"
+                        android:textColor="@android:color/white"
+
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/eye1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="lids fused"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/eye2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="lids open"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/eye3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="sl. curved pinna; soft; slow recoil"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/eye4"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="well-curved pinna; soft but ready recoil"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/eye5"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="formed &amp;    firm"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/eye6"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="thick cartilage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cellgreen"
+                        android:gravity="center"
+                        android:text="Genitals (Male)"
+                        android:textColor="@android:color/white"
+
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/male1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="scrotum flat, smooth"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/male2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="scrotum empty, faint rugae"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/male3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="testes in upper canal,rare rugae"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/male4"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="testes descending, few rugae"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/male5"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="testes down, good rugae"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/male6"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="testes pendulous, deep rugae"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:id="@+id/container2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/skin_header"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cellgreen"
+                        android:gravity="center"
+                        android:text="Genitals (Female)"
+
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/female1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="clitoris prominent &amp; labia flat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/female2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="prominent clitoris &amp; small labia minora"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/female3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="prominent clitoris &amp; enlarging minora"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/female4"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="majora &amp; minora equally prominent"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/female5"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="majora large, minora small"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/female6"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text="majora cover clitoris &amp; minora"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_gray_back"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="406dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cellgreen"
+                        android:gravity="center"
+                        android:text="TOTAL PHYSICAL MATURITY SCORE"
+
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/calculated_score"
+                        android:layout_width="400dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cellgreen"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/calculatescore"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/calculatescorebtn"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Reference:"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="600dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/refference_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+</RelativeLayout>

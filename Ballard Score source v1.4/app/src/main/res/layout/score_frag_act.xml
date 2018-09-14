@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="810dp"
+        android:layout_height="45dp"
+        android:background="@drawable/topbar"
+        android:gravity="center"
+        android:text="phone"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:visibility="invisible"/>
+
+    <ScrollView
+        android:id="@+id/scrl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/score_black_btn"
+                android:gravity="center"
+                android:text="Reset"
+                android:textColor="@android:color/white"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/main_layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reset_button"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="0dp">
+
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="Score Sheet"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/desc_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_text"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingMultiplier="1.1"
+                    android:gravity="center_vertical"
+                    android:text="Use this score sheet to assess the gestational maturity of the newborn. At the end of the examination the total score determines the gestational maturity in weeks."
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+
+                <Button
+                    android:id="@+id/calculate_maturity_rate"
+                    android:layout_width="220dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/desc_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/score_black_btn"
+                    android:text="CALC MATURITY RATING"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"/>
+
+                <Button
+                    android:id="@+id/maturity_rating_table"
+                    android:layout_width="220dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/calculate_maturity_rate"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/score_black_btn"
+                    android:text="MATURITY RATING TABLE"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/table_top_title_layout"
+                android:layout_width="280dp"
+                android:layout_height="43dp"
+                android:layout_below="@+id/main_layout_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/table_top"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/text_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="50"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="Total Score"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/text_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="50"
+                    android:gravity="center"
+                    android:paddingRight="10dp"
+                    android:text="Weeks"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/edit_table_top_title_layout"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/table_top_title_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/table_top"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/ed_one"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="50"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/ed_two"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="50"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/admob_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,566 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="../App_Themes/Terra/default.css" type="text/css" rel="stylesheet"/>
+    <style type="text/css">
+        table.imagetable
+        {
+        font-family: verdana,arial,sans-serif;
+        font-size:11px;
+        color:#ffffff;
+        border-width: 1px;
+        border-color: #999999;
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 580px;
+        }
+
+        table.imagetable th
+        {
+        background:#b5cfd2 url('cell-green.png');
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #999999;
+        }
+        table.imagetable td
+        {
+        background: url('light_gray_back.png');
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        }
+        img {
+        height: 37;
+        width: 55;
+        }
+        .number
+        {
+        font-family: verdana,arial,sans-serif;
+        font-size:15px;
+        color:#000000;
+        border-width: 1px;
+        border-color: #999999;
+        border-collapse: collapse;
+        text-align:center;
+        }
+    </style>
+
+    <script type="text/javascript">
+        Android.getValueJson();
+		   		 function showAndroidToast(toast) {
+		        Android.showToast(toast);
+   		 }
+
+    </script>
+
+
+    <script type="text/javascript">
+            var v1 ;
+            var v2 ;
+            var v3 ;
+            var v4 ;
+            var v5 ;
+            var v6 ;
+            var v7;
+            var id;
+            var chk;
+            
+            
+            chk=0;
+            var mainContent;
+            
+             function showAndroidToast(toast) {
+			   		 alert("cdsgdsfgfd");
+			        Android.showToast(toast);
+			  }
+            
+             function saveId(_id)
+			{
+					alert("called");
+					Android.nextScreen(_id);
+			} 
+     			 
+             function setJson(Jsonobject)
+	   			 {
+	     
+	     		//valuePickFunc('0','square','squ2','squ',6);
+	     		//Android.getValueJson();
+	     		
+	     		if(Jsonobject.length > 0){
+	     		
+					for(var i =0; i<Jsonobject.length;i++)
+					{
+					var first = Jsonobject[i].val0 ;
+					var second = Jsonobject[i].val1 ;
+					var third = Jsonobject[i].val2 ;
+					var fourth = Jsonobject[i].val3 ;
+					total = parseInt(Jsonobject[i].val4);
+					NewvaluePickFunc(first,second,third,fourth,4);
+					
+					}
+				}
+			
+		 }
+            
+            
+            function valuePickFunc(valu,category,cell,rowId,count)
+            {
+                
+                
+                for (var i=1;i<=count;i++)
+                {
+                    id = rowId + i;
+                    mainContent = document.getElementById(id);
+                    //mainContent.style.backgroundColor = "#FFFFFF";
+                    mainContent.style.backgroundImage = "url(light_gray_back.png)";
+                }
+                
+                
+                if(valu && category=="posture")
+                {
+                    //document.getElementById("posture").value = valu;
+                    v1 = valu;
+                    
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                    
+                }
+                else if(valu && category=="square")
+                {
+                    //document.getElementById("square").value = valu;
+                    v2 = valu;
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                    
+                }
+                else if(valu && category=="arm")
+                {
+                    // document.getElementById("arm").value = valu;
+                    v3 = valu;
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                    
+                }
+                else if(valu && category=="popliteal")
+                {
+                    // document.getElementById("popliteal").value = valu;
+                    v4 = valu;
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                    
+                }
+                else if(valu && category=="scarf")
+                {
+                    //document.getElementById("scarf").value = valu;
+                    v5 = valu;
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                    
+                }
+                else if(valu && category=="heel")
+                {
+                    // document.getElementById("heel").value = valu;
+                    v6 = valu;
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                    
+                }
+                Android.getValuesFromHtml(valu+":"+category+":"+cell+":"+rowId+":"+count);
+                
+                calculateSum();
+                
+            }
+            
+            function NewvaluePickFunc(valu,category,cell,rowId,count)
+            {
+                
+                
+                for (var i=1;i<=count;i++)
+                {
+                    id = rowId + i;
+                    mainContent = document.getElementById(id);
+                    //mainContent.style.backgroundColor = "#FFFFFF";
+                    mainContent.style.backgroundImage = "url(light_gray_back.png)";
+                }
+                
+                
+                if(valu && category=="posture")
+                {
+                    //document.getElementById("posture").value = valu;
+                    v1 = valu;
+                    
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                     calculateSum();
+                }
+                else if(valu && category=="square")
+                {
+                    //document.getElementById("square").value = valu;
+                    v2 = valu;
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                     calculateSum();
+                }
+                else if(valu && category=="arm")
+                {
+                    // document.getElementById("arm").value = valu;
+                    v3 = valu;
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                     calculateSum();
+                }
+                else if(valu && category=="popliteal")
+                {
+                    // document.getElementById("popliteal").value = valu;
+                    v4 = valu;
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                     calculateSum();
+                }
+                else if(valu && category=="scarf")
+                {
+                    //document.getElementById("scarf").value = valu;
+                    v5 = valu;
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                     calculateSum();
+                }
+                else if(valu && category=="heel")
+                {
+                    // document.getElementById("heel").value = valu;
+                    v6 = valu;
+                    mainContent = document.getElementById(cell);
+                    mainContent.style.backgroundImage = "url(cell-grey.jpg)";
+                     calculateSum();
+                }
+                
+               
+                
+            }
+       
+        
+        function calculateSum()
+        {
+            v1=parseInt(v1);
+            v2=parseInt(v2);
+            v3=parseInt(v3);
+            v4=parseInt(v4);
+            v5=parseInt(v5);
+            v6=parseInt(v6);
+            
+            
+            if(v1>=-1 && v2>=-1 && v3>=-1 && v4>=-1 && v5>=-1 && v6>=-1)
+            {
+                document.getElementById("neuroSUM").value = (v1+v2+v3+v4+v5+v6);
+                document.getElementById("neuroSUM").hidden = 0;
+                document.getElementById("neuroSUM").style.visibility = "visible";
+                showAndroidToast(document.getElementById("neuroSUM").value +':N:AN:D');
+            }
+            
+        }
+        function fullScreen()
+        {
+            var btn=document.getElementById("fullscreen");
+            
+            
+            
+            if(chk==0)
+            {
+                chk=1;
+                
+                btn.src="close.png";
+                
+            }
+            else
+            {
+                chk=0;
+                btn.src="fullscreen.png";
+                
+            }
+            
+            location.href="full-screen:";
+        }
+        function checkValues()
+        {
+            //alert("df");
+            if(v1>=-1 && v2>=-1 && v3>=-1 && v4>=-1 && v5>=-1 && v6>=-1)
+            {
+                
+               var str  = (v1+v2+v3+v4+v5+v6);
+               
+              showAndroidToast(str  +':N:A:C');
+            }
+            else{
+            	showAndroidToast('All');
+            }
+            
+        }
+
+    </script>
+<body bgcolor="#DDDDDD">
+<div id="outer">
+    <div id="upbg">
+    </div>
+    <div id="inner">
+        <div id="splash">
+        </div>
+        <div id="primarycontent">
+
+
+            <div class="post">
+
+                <div class="post">
+
+                    <div class="content">
+
+                        <table border="1" class="imagetable">
+                            <tr class="ScoreSheetTableHeader">
+                                <th rowspan="2">
+                                    SIGN
+                                </th>
+                                <th colspan="3" align="center">
+                                    SCORE
+                                </th>
+                                <th align="right" colspan="2">
+                                    <input align="right" width="80" height="30" id="fullscreen"
+                                           align="left" type='image' alt="closeFull" src="close.png"
+                                           onClick="showAndroidToast('full');"/>
+                                </th>
+                                <th colspan="2" align="right">
+                                    <input align="right" type='image' alt="Physical Maturity Table"
+                                           src="physicalbtn.png"
+                                           onClick="showAndroidToast('physical');"/>
+                                </th>
+                            </tr>
+                            <tr class="ScoreSheetBlue">
+                                <td style="height: 31px" class="number">
+                                    -1
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    0
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    1
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    2
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    3
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    4
+                                </td>
+                                <td style="height: 31px" class="number">
+                                    5
+                                </td>
+                            </tr>
+
+                            <!--POSTURE-->
+
+                            <tr class='even'>
+                                <th>
+                                    Posture
+                                </th>
+                                <td class="ScoreSheetGray">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+                                    &nbsp;
+                                </td>
+                                <td id="pos1"
+                                    onclick="valuePickFunc('0','posture','pos1','pos',5);"><img
+                                        alt="posture" src="posture0.gif"/></td>
+                                <td id="pos2"
+                                    onclick="valuePickFunc('1','posture','pos2','pos',5);"><img
+                                        alt="posturev" src="posture1.gif"/></td>
+                                <td id="pos3"
+                                    onclick="valuePickFunc('2','posture','pos3','pos',5);"><img
+                                        alt="posturev" src="posture2.gif"/></td>
+                                <td id="pos4"
+                                    onclick="valuePickFunc('3','posture','pos4','pos',5);"><img
+                                        alt="posture" src="posture3.gif"/></td>
+                                <td id="pos5"
+                                    onclick="valuePickFunc('4','posture','pos5','pos',5);"><img
+                                        alt="posture" src="posture4.gif"/></td>
+                                <td class="ScoreSheetGray">
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                </td>
+
+                            </tr>
+
+                            <!--Square Window-->
+
+                            <tr class='even'>
+                                <th>
+                                    Square Window
+                                </th>
+                                <td id="squ1"
+                                    onclick="valuePickFunc('-1','square','squ1','squ',6);"><img
+                                        alt="square window" src="square-1.gif"/></td>
+                                <td id="squ2" onclick="valuePickFunc('0','square','squ2','squ',6);">
+                                    <img alt="square window" src="square0.gif"/></td>
+                                <td id="squ3" onclick="valuePickFunc('1','square','squ3','squ',6);">
+                                    <img alt="square window" src="square1.gif"/></td>
+                                <td id="squ4" onclick="valuePickFunc('2','square','squ4','squ',6);">
+                                    <img alt="square window" src="square2.gif"/></td>
+                                <td id="squ5" onclick="valuePickFunc('3','square','squ5','squ',6);">
+                                    <img alt="square window" src="square3.gif"/></td>
+                                <td id="squ6" onclick="valuePickFunc('4','square','squ6','squ',6);">
+                                    <img alt="square window" src="square4.gif"/></td>
+
+                                <td class="ScoreSheetGray">
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                </td>
+
+                            </tr>
+
+                            <!--ARM Recoil-->
+
+                            <tr class='even'>
+                                <th>
+                                    Arm Recoil
+                                </th>
+                                <td class="ScoreSheetGray">
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </td>
+                                <td id="arm1" onclick="valuePickFunc('0','arm','arm1','arm',5);">
+                                    <img alt="Arm" src="arm0.gif"/></td>
+                                <td id="arm2" onclick="valuePickFunc('1','arm','arm2','arm',5);">
+                                    <img alt="Arm" src="arm1.gif"/></td>
+                                <td id="arm3" onclick="valuePickFunc('2','arm','arm3','arm',5);">
+                                    <img alt="Arm" src="arm2.gif"/></td>
+                                <td id="arm4" onclick="valuePickFunc('3','arm','arm4','arm',5);">
+                                    <img alt="Arm" src="arm3.gif"/></td>
+                                <td id="arm5" onclick="valuePickFunc('4','arm','arm5','arm',5);">
+                                    <img alt="Arm" src="arm4.gif"/></td>
+                                <td class="ScoreSheetGray">
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                                    &nbsp; </td>
+
+                            </tr>
+
+                            <!--Popliteal Angle -->
+
+
+                            <tr class='even'>
+                                <th>
+                                    Popliteal Angle
+                                </th>
+                                <td id="pop1"
+                                    onclick="valuePickFunc('-1','popliteal','pop1','pop',7);"><img
+                                        alt="pop" src="pop-1.gif"/></td>
+                                <td id="pop2"
+                                    onclick="valuePickFunc('0','popliteal','pop2','pop',7);"><img
+                                        alt="pop" src="pop0.gif"/></td>
+                                <td id="pop3"
+                                    onclick="valuePickFunc('1','popliteal','pop3','pop',7);"><img
+                                        alt="pop" src="pop1.gif"/></td>
+                                <td id="pop4"
+                                    onclick="valuePickFunc('2','popliteal','pop4','pop',7);"><img
+                                        alt="pop" src="pop2.gif"/></td>
+                                <td id="pop5"
+                                    onclick="valuePickFunc('3','popliteal','pop5','pop',7);"><img
+                                        alt="pop" src="pop3.gif"/></td>
+                                <td id="pop6"
+                                    onclick="valuePickFunc('4','popliteal','pop6','pop',7);"><img
+                                        alt="pop" src="pop4.gif"/></td>
+                                <td id="pop7"
+                                    onclick="valuePickFunc('5','popliteal','pop7','pop',7);"><img
+                                        alt="pop" src="pop5.gif"/></td>
+
+                            </tr>
+
+
+                            <!--Scarf Sign -->
+
+
+                            <tr class='even'>
+                                <th>
+                                    Scarf Sign
+                                </th>
+                                <td id="scr1" onclick="valuePickFunc('-1','scarf','scr1','scr',6);">
+                                    <img alt="pop" src="scarf-1.gif"/></td>
+                                <td id="scr2" onclick="valuePickFunc('0','scarf','scr2','scr',6);">
+                                    <img alt="pop" src="scarf0.gif"/></td>
+                                <td id="scr3" onclick="valuePickFunc('1','scarf','scr3','scr',6);">
+                                    <img alt="pop" src="scarf1.gif"/></td>
+                                <td id="scr4" onclick="valuePickFunc('2','scarf','scr4','scr',6);">
+                                    <img alt="pop" src="scarf2.gif"/></td>
+                                <td id="scr5" onclick="valuePickFunc('3','scarf','scr5','scr',6);">
+                                    <img alt="pop" src="scarf3.gif"/></td>
+                                <td id="scr6" onclick="valuePickFunc('4','scarf','scr6','scr',6);">
+                                    <img alt="pop" src="scarf4.gif"/></td>
+                                <td>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                            </tr>
+
+
+                            <!--Heel To Ear -->
+
+                            <tr class='even'>
+                                <th>Heel To Ear</th>
+                                <td id="hel1" onclick="valuePickFunc('-1','heel','hel1','hel',6);">
+                                    <img alt="pop" src="heel-1.gif"/></td>
+                                <td id="hel2" onclick="valuePickFunc('0','heel','hel2','hel',6);">
+                                    <img alt="pop" src="heel0.gif"/></td>
+                                <td id="hel3" onclick="valuePickFunc('1','heel','hel3','hel',6);">
+                                    <img alt="pop" src="heel1.gif"/></td>
+                                <td id="hel4" onclick="valuePickFunc('2','heel','hel4','hel',6);">
+                                    <img alt="pop" src="heel2.gif"/></td>
+                                <td id="hel5" onclick="valuePickFunc('3','heel','hel5','hel',6);">
+                                    <img alt="pop" src="heel3.gif"/></td>
+                                <td id="hel6" onclick="valuePickFunc('4','heel','hel6','hel',6);">
+                                    <img alt="pop" src="heel4.gif"/></td>
+                                <td>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                            </tr>
+                            <tr class='even'>
+                                <th colspan=4 align="center">
+                                    TOTAL NEUROMUSCULAR SCORE
+                                </th>
+                                <th colspan=4 align="left">
+                                                <textarea
+                                                        style="background-color:3A3B1F; visibility:hidden;  color:white; font-size: 20pt;"
+                                                        id="neuroSUM" rows="1" cols="2" hidden="YES"
+                                                        readonly="YES"
+                                                        style="border: none; font-size: 12pt">
+                                                    
+                                                </textarea>
+                                </th>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+                <!--References footer -->
+                <div class="post">
+                    <div class="content">
+
+
+                        <input align="left" width="180" height="40" id="scorechk" align="left"
+                               type='image' alt="Calculate Score" src="calculatescorebtn.png"
+                               onclick="checkValues();"/>
+                        <br><br>
+                        <p><span class="smallFooter"><b>References :</b>
+                                        <br/>Ballard JL, Khoury JC, Wedig K,
+                                        <i>et al</i>
+                                        : New Ballard Score, expanded to include extremely premature<br/>infants.
+                                        <i>J Pediatrics</i> 1991; 119:417-423.
+                                    </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- primary content end -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</head>
+</html>

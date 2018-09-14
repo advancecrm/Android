@@ -18,6 +18,9 @@ import android.widget.TextView;
 import com.ballardscoreapp.main.R;
 import com.ballardscoreapp.main.ui.DetailActivity;
 import com.ballardscoreapp.main.util.Constants;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 //import com.google.ads.AdRequest;
 //import com.google.ads.AdSize;
 //import com.google.ads.AdView;
@@ -25,13 +28,14 @@ import com.ballardscoreapp.main.util.Constants;
 public class EssayListFragment extends Fragment {
 
     String[] ItemText = {"Introduction", "New Ballard Score", "Neuromuscular Maturity", "Summary"};
+    private AdView mAdView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.monograph_frag_act, parent, false);
 
-        ListView listView = (ListView) rootView.findViewById(R.id.monograph_list);
+        ListView listView = rootView.findViewById(R.id.monograph_list);
         listView.setAdapter(new MonographAdapter(getActivity(), ItemText));
 
 //        FrameLayout admobView = (FrameLayout) rootView.findViewById(R.id.admob_view);
@@ -39,6 +43,12 @@ public class EssayListFragment extends Fragment {
 //        AdView ad = new AdView(getActivity(), AdSize.SMART_BANNER, Constants.BALLARD_BANNER_ID);
 //        admobView.addView(ad);
 //        ad.loadAd(new AdRequest());
+
+        MobileAds.initialize(rootView.getContext(), Constants.BALLARD_BANNER_ID);
+        // Load an Ad:
+        mAdView = rootView.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         final Intent intent = new Intent(getActivity(), DetailActivity.class);
         listView.setOnItemClickListener(new OnItemClickListener() {

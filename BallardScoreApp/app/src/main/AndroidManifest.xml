@@ -10,11 +10,11 @@
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
-    <!--
+
     <meta-data
         android:name="com.google.android.gms.ads.APPLICATION_ID"
         android:value="ca-app-pub-7124699817614464~9433246821"/>
-    -->
+
 
     <application
         android:name=".util.Globals"
@@ -39,9 +39,11 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
+         <!--
         <activity
             android:name="com.google.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        -->
         <activity
             android:name=".ui.score.CalculateMaturityLock"
             android:launchMode="singleTask"

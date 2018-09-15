@@ -15,12 +15,15 @@ import com.ballardscoreapp.main.R;
 import com.ballardscoreapp.main.ui.DetailActivity;
 import com.ballardscoreapp.main.util.Constants;
 import com.ballardscoreapp.main.util.Globals;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 //import com.google.ads.AdRequest;
 //import com.google.ads.AdSize;
 //import com.google.ads.AdView;
 
 public class FaqDetailFragment extends Fragment {
-
+    private AdView mAdView;
     WebView faqansview;
     Globals global;
     TextView que_tv;
@@ -45,6 +48,14 @@ public class FaqDetailFragment extends Fragment {
 //                "ca-app-pub-7124699817614464/7549868151");
 //        layout.addView(ad);
 //        ad.loadAd(new AdRequest());
+
+        MobileAds.initialize(container.getContext(), Constants.BALLARD_BANNER_ID);
+        // Load an Ad:
+        //mAdView = rootView.findViewById(R.id.adView);
+        mAdView = container.getRootView().findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         que_tv.setText(que);
         String s5 = ans.replace(";\':", ";\">");

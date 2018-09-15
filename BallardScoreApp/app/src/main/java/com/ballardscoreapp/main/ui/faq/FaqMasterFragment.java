@@ -40,7 +40,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class FaqMasterFragment extends Fragment {
-//    private AdView mAdView;
+    private AdView mAdView;
     String aResponse = "";
     String[] ItemText = {"Is there a formula that can be a",
             "The paper form does from", "Can we assessment be performed",
@@ -104,7 +104,7 @@ public class FaqMasterFragment extends Fragment {
 //        ad.loadAd(new AdRequest());
 
 //        MobileAds.initialize(rootView.getContext(), Constants.BALLARD_BANNER_ID);
-//        // Load an Ad:
+        // Load an Ad:
 //        mAdView = rootView.findViewById(R.id.adView);
 //        AdRequest adRequest = new AdRequest.Builder().build();
 //        mAdView.loadAd(adRequest);
